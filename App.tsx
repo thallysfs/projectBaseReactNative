@@ -37,9 +37,12 @@ export default function App() {
   // }
 
   return (
-    <ThemeProvider theme={theme}>   
-      <Routes />
-    </ThemeProvider>
+	  //para que a lib gestureHandle funcione preciso envolver essa tag
+	<GestureHandlerRootView style={{ flex: 1}}>
+		<ThemeProvider theme={theme}>   
+		  <Routes />
+		</ThemeProvider>
+	</GestureHandlerRootView>
   );
 }
 
